@@ -4,7 +4,6 @@
             "displayName": "Field",
             "name": "category",
             "kind": "GroupingOrMeasure"
-           
         }
     ],
     "dataViewMappings": [
@@ -33,9 +32,11 @@
     "objects": {
         "textSettings": {
             "displayName": "Text settings",
+            "description": "Configure text settings",
             "properties": {
                 "color": {
                     "displayName": "Color",
+                    "description": "Change the color of text",
                     "type": {
                         "fill": {
                             "solid": {
@@ -46,6 +47,7 @@
                 },
                 "fontSize": {
                     "displayName": "Text size",
+                    "description": "Change the font size of text",
                     "type": {
                         "formatting": {
                             "fontSize": true
@@ -53,16 +55,9 @@
                     },
                     "suppressFormatPainterCopy": true
                 },
-                "postText": {
-                    "displayName": "Text to append",
-                    "type": {
-                        "text": true
-                    },
-                    "suppressFormatPainterCopy": true
-                },
-                
                 "alignment": {
                     "displayName": "Text alignment",
+                    "description": "Change the text alignment",
                     "type": {
                         "enumeration": [
                             {
@@ -77,14 +72,21 @@
                                 "value": "right",
                                 "displayName": "right"
                             }
-                        ] 
+                        ]
+                    }
+                },
+                "lineBreak": {
+                    "displayName": "Custom line break",
+                    "description": "Configure line break",
+                    "type": {
+                        "text": true
                     }
                 }
-               
             }
         },
         "staticText": {
             "displayName": "Static text settings",
+            "description": "Configure static text settings",
             "properties": {
                 "showColon": {
                     "displayName": "Show colon",
@@ -92,9 +94,9 @@
                         "bool": true
                     }
                 },
-                
                 "textPosition": {
                     "displayName": "Text position",
+                    "description": "Configure text position",
                     "type": {
                         "enumeration": [
                             {
@@ -108,8 +110,16 @@
                         ]
                     }
                 },
+                "showTextHiglighted": {
+                    "displayName": "Show text highlighter",
+                    "description": "Configure text highlighter",
+                    "type": {
+                        "bool": true
+                    }
+                },
                 "backgroundcolor": {
                     "displayName": "Text highlighter",
+                    "description": "Configure text highlighter color",
                     "type": {
                         "fill": {
                             "solid": {
@@ -120,6 +130,7 @@
                 },
                 "postText": {
                     "displayName": "Text to append",
+                    "description": "Configure text to append",
                     "type": {
                         "text": true
                     },
@@ -231,29 +242,41 @@
                 },
                 "boldStyle": {
                     "displayName": "Bold",
+                    "description": "Configure bold settings",
                     "type": {
                         "bool": true
                     }
                 },
                 "italicStyle": {
                     "displayName": "Italic",
+                    "description": "Configure italic settings",
                     "type": {
                         "bool": true
                     }
                 },
                 "underlineStyle": {
                     "displayName": "Underline",
+                    "description": "Configure underline settings",
                     "type": {
                         "bool": true
                     }
                 }
             }
         },
-        "Settings": {
+        "dynamicSettings": {
             "displayName": "Dynamic text settings",
+            "description": "Configure dynamic text settings",
             "properties": {
+                "showTextHiglighted": {
+                    "displayName": "Show text highlighter",
+                    "description": "Configure text highlighter",
+                    "type": {
+                        "bool": true
+                    }
+                },
                 "backgroundcolor": {
                     "displayName": "Text highlighter",
+                    "description": "Configure text highlighter color",
                     "type": {
                         "fill": {
                             "solid": {
@@ -368,34 +391,38 @@
                 },
                 "boldStyle": {
                     "displayName": "Bold",
+                    "description": "Configure bold settings",
                     "type": {
                         "bool": true
                     }
                 },
                 "italicStyle": {
                     "displayName": "Italic",
+                    "description": "Configure italic settings",
                     "type": {
                         "bool": true
                     }
                 },
                 "underlineStyle": {
                     "displayName": "Underline",
+                    "description": "Configure underline settings",
                     "type": {
                         "bool": true
                     }
                 }
-             
             }
         },
-        "ErrorMessage":{
+        "errorMessage": {
             "displayName": "Error message",
-            "properties":{
-                "nullValue":{                    
+            "description": "Configure error message",
+            "properties": {
+                "blankValue": {
                     "displayName": "Custom message",
-                    "type":{
-                        "text": true   
+                    "description": "Configure custom message",
+                    "type": {
+                        "text": true
                     }
-                } 
+                }
             }
         }
     }
